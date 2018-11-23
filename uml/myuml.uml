@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="190.05608974358975" y="0.0">ExpressionInterface.Expression</node>
+    <node x="258.9391025641026" y="374.0">ExpressionEnity.AddExp</node>
+    <node x="383.84775641025647" y="173.0">ExpressionEnity.BinaryExp</node>
+    <node x="416.2516025641026" y="527.0">ExpressionEnity.MulExp</node>
+    <node x="10.5" y="197.0">ExpressionEnity.ConsExp</node>
+    <node x="1.9391025641025976" y="374.0">ExpressionEnity.MonomialExp</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="ExpressionEnity.AddExp" target="ExpressionEnity.BinaryExp">
+      <point x="103.66666666666663" y="-51.5" />
+      <point x="518.1057692307693" y="349.0" />
+      <point x="500.47275641025647" y="349.0" />
+      <point x="-38.875" y="75.5" />
+    </edge>
+    <edge source="ExpressionEnity.MulExp" target="ExpressionInterface.Expression">
+      <point x="116.625" y="-51.5" />
+      <point x="688.3766025641025" y="502.0" />
+      <point x="705.3477564102565" y="502.0" />
+      <point x="705.3477564102565" y="123.0" />
+      <point x="413.889423076923" y="123.0" />
+      <point x="105.33333333333326" y="51.5" />
+    </edge>
+    <edge source="ExpressionEnity.AddExp" target="ExpressionInterface.Expression">
+      <point x="-103.66666666666669" y="-51.5" />
+      <point x="310.7724358974359" y="349.0" />
+      <point x="304.60096153846155" y="349.0" />
+      <point x="304.60096153846155" y="153.0" />
+      <point x="308.5560897435897" y="153.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="ExpressionEnity.MonomialExp" target="ExpressionInterface.Expression">
+      <point x="-79.0" y="-51.5" />
+      <point x="41.4391025641026" y="349.0" />
+      <point x="0.0" y="349.0" />
+      <point x="0.0" y="133.0" />
+      <point x="203.22275641025644" y="133.0" />
+      <point x="-105.33333333333331" y="51.5" />
+    </edge>
+    <edge source="ExpressionEnity.MulExp" target="ExpressionEnity.AddExp">
+      <point x="-116.625" y="-51.5" />
+      <point x="455.1266025641026" y="502.0" />
+      <point x="414.4391025641026" y="502.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="ExpressionEnity.ConsExp" target="ExpressionInterface.Expression">
+      <point x="59.25" y="-51.5" />
+      <point x="188.25" y="153.0" />
+      <point x="255.88942307692307" y="153.0" />
+      <point x="-52.666666666666686" y="51.5" />
+    </edge>
+    <edge source="ExpressionEnity.MonomialExp" target="ExpressionEnity.ConsExp">
+      <point x="0.0" y="-51.5" />
+      <point x="120.4391025641026" y="349.0" />
+      <point x="129.0" y="349.0" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="ExpressionEnity.BinaryExp" target="ExpressionInterface.Expression">
+      <point x="-103.66666666666669" y="-75.5" />
+      <point x="435.6810897435897" y="153.0" />
+      <point x="334.8894230769231" y="153.0" />
+      <point x="26.333333333333314" y="51.5" />
+    </edge>
+    <edge source="ExpressionEnity.MulExp" target="ExpressionEnity.BinaryExp">
+      <point x="38.875" y="-51.5" />
+      <point x="610.6266025641025" y="502.0" />
+      <point x="600.0" y="502.0" />
+      <point x="600.0" y="349.0" />
+      <point x="655.9727564102565" y="349.0" />
+      <point x="116.625" y="75.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="293.5" y="161.0" />
+  <SelectedNodes>
+    <node>ExpressionInterface.Expression</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Properties</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

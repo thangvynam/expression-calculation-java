@@ -23,9 +23,22 @@ public abstract class BinaryExp implements Expression{
 
     public String ToString() {
         String op = getOperator();
-        return "(" + exp1.ToString()+" " + op + " " + exp2.ToString() + ")";
-    }
+        if(op.equals("+")){
+            if (exp1.ToString().equals("0.0"))
+                return exp2.ToString();
+            if (exp2.ToString().equals("0.0"))
+                return exp1.ToString();
+        }
+        if(op.equals("*")){
+            if(exp1.ToString().equals("0.0") || exp2.ToString().equals("0.0"))
+                return "0.0";
+        }
+        if(op.equals("/")){
 
+        }
+        return "(" + exp1.ToString()+" " + op + " " + exp2.ToString() + ")";
+
+    }
     protected abstract String getOperator();
 
 

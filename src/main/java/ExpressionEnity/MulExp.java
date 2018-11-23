@@ -15,11 +15,12 @@ public class MulExp extends BinaryExp {
     }
 
     public Expression derive() {
-        //return new AddExp(this.exp1.derive().,this.exp2.derive());
-        return null;
+
+        return new AddExp(new MulExp(exp1.derive(),exp2),new MulExp(exp2.derive(),exp1));
+
     }
 
     protected String getOperator() {
-        return null;
+        return "*";
     }
 }

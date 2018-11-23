@@ -19,14 +19,20 @@ public class MonomialExp implements Expression {
     }
 
     public Expression derive() {
+        if(b==0)
+            return new ConsExp(0);
         if(b==1)
             return new ConsExp(a);
         return new MonomialExp(a*b,b-1);
     }
 
     public String ToString() {
+        if(a==0)
+            return "0.0";
         if(b==1)
-            return a+ "x";
-        return a+ "x^" + b;
+            return a+ "*x";
+        if(b==0)
+            return a +"";
+        return a+ "*x^" + b;
     }
 }
