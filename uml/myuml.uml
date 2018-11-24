@@ -3,51 +3,73 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="662.0" y="0.0">ExpressionInterface.Expression</node>
-    <node x="330.99999999999994" y="354.0">ExpressionEnity.AddExp</node>
-    <node x="662.0" y="354.0">ExpressionEnity.DivExp</node>
-    <node x="330.9999999999999" y="153.0">ExpressionEnity.BinaryExp</node>
-    <node x="0.0" y="354.0">ExpressionEnity.MulExp</node>
-    <node x="662.0" y="177.0">ExpressionEnity.ConsExp</node>
-    <node x="918.9999999999999" y="177.0">ExpressionEnity.MonomialExp</node>
+    <node x="720.5" y="0.0">ExpressionInterface.Expression</node>
+    <node x="0.0" y="354.0">ExpressionEnity.AddExp</node>
+    <node x="0.0" y="607.0">NotationEnity.PostfxNotation</node>
+    <node x="331.0" y="354.0">ExpressionEnity.DivExp</node>
+    <node x="331.0" y="153.0">ExpressionEnity.BinaryExp</node>
+    <node x="683.3101545253863" y="43.994481236203114">NotationInterface.Notation</node>
+    <node x="662.0" y="354.0">ExpressionEnity.MulExp</node>
+    <node x="676.0" y="607.0">NotationEnity.InfixNotation</node>
+    <node x="1044.0" y="177.0">ExpressionEnity.ConsExp</node>
+    <node x="338.0" y="607.0">NotationEnity.PrefixNotation</node>
+    <node x="662.0" y="165.0">ExpressionEnity.MonomialExp</node>
   </nodes>
   <notes />
   <edges>
     <edge source="ExpressionEnity.AddExp" target="ExpressionEnity.BinaryExp">
-      <point x="-5.6843418860808015E-14" y="-51.5" />
-      <point x="0.0" y="75.5" />
+      <point x="0.0" y="-51.5" />
+      <point x="155.5" y="329.0" />
+      <point x="382.8333333333333" y="329.0" />
+      <point x="-103.66666666666669" y="75.5" />
+    </edge>
+    <edge source="NotationEnity.PrefixNotation" target="NotationInterface.Notation">
+      <point x="0.0" y="-27.5" />
+      <point x="0.0" y="27.5" />
     </edge>
     <edge source="ExpressionEnity.MonomialExp" target="ExpressionInterface.Expression">
-      <point x="0.0" y="-51.5" />
-      <point x="1037.5" y="128.0" />
-      <point x="859.5" y="128.0" />
-      <point x="79.0" y="51.5" />
+      <point x="0.0" y="-63.5" />
+      <point x="0.0" y="51.5" />
+    </edge>
+    <edge source="NotationEnity.InfixNotation" target="NotationInterface.Notation">
+      <point x="0.0" y="-27.5" />
+      <point x="835.0" y="582.0" />
+      <point x="603.0" y="582.0" />
+      <point x="106.0" y="27.5" />
     </edge>
     <edge source="ExpressionEnity.ConsExp" target="ExpressionInterface.Expression">
       <point x="0.0" y="-51.5" />
-      <point x="0.0" y="51.5" />
+      <point x="1166.5" y="128.0" />
+      <point x="924.6666666666667" y="128.0" />
+      <point x="81.66666666666674" y="51.5" />
+    </edge>
+    <edge source="ExpressionEnity.BinaryExp" target="ExpressionInterface.Expression">
+      <point x="0.0" y="-75.5" />
+      <point x="486.5" y="128.0" />
+      <point x="761.3333333333334" y="128.0" />
+      <point x="-81.66666666666663" y="51.5" />
     </edge>
     <edge source="ExpressionEnity.MulExp" target="ExpressionEnity.BinaryExp">
       <point x="0.0" y="-51.5" />
-      <point x="155.5" y="329.0" />
-      <point x="382.8333333333332" y="329.0" />
-      <point x="-103.66666666666669" y="75.5" />
-    </edge>
-    <edge source="ExpressionEnity.BinaryExp" target="ExpressionInterface.Expression">
-      <point x="-5.6843418860808015E-14" y="-75.5" />
-      <point x="486.49999999999983" y="128.0" />
-      <point x="701.5" y="128.0" />
-      <point x="-79.0" y="51.5" />
+      <point x="817.5" y="329.0" />
+      <point x="590.1666666666667" y="329.0" />
+      <point x="103.66666666666674" y="75.5" />
     </edge>
     <edge source="ExpressionEnity.DivExp" target="ExpressionEnity.BinaryExp">
       <point x="0.0" y="-51.5" />
-      <point x="817.5" y="329.0" />
-      <point x="590.1666666666665" y="329.0" />
-      <point x="103.66666666666669" y="75.5" />
+      <point x="0.0" y="75.5" />
+    </edge>
+    <edge source="NotationEnity.PostfxNotation" target="NotationInterface.Notation">
+      <point x="0.0" y="-27.5" />
+      <point x="159.0" y="582.0" />
+      <point x="391.0" y="582.0" />
+      <point x="-106.0" y="27.5" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="0.5461538461538461" x="364.0" y="315.00000000000006" />
-  <SelectedNodes />
+  <settings layout="Hierarchic Group" zoom="0.692131398013751" x="644.5" y="331.0927152317881" />
+  <SelectedNodes>
+    <node>NotationInterface.Notation</node>
+  </SelectedNodes>
   <Categories>
     <Category>Methods</Category>
     <Category>Properties</Category>
