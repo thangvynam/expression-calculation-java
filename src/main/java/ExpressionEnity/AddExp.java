@@ -5,6 +5,8 @@ import ExpressionInterface.Expression;
 public class AddExp extends BinaryExp {
     private boolean checkMinus  = false;
     protected double doEvaluate(double val1, double val2) {
+        if(checkMinus)
+            return val1-val2;
         return val1+val2;
     }
 
