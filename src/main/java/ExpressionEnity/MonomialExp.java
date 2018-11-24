@@ -1,12 +1,22 @@
 package ExpressionEnity;
 
 import ExpressionInterface.Expression;
+import NotationInterface.Notation;
+
 import java.lang.Math;
 
 public class MonomialExp implements Expression {
     // a*x^b
-    private double a ;
-    private double b ;
+    private double a;
+    private double b;
+
+    public static Expression createInstance(double a,double b){
+        if(a == 0)
+            return new ConsExp(0);
+        if(b == 0)
+            return new  ConsExp(a);
+        return new MonomialExp(a,b);
+    }
     public MonomialExp() {
     }
 
@@ -26,13 +36,13 @@ public class MonomialExp implements Expression {
         return new MonomialExp(a*b,b-1);
     }
 
-    public String ToString() {
-        if(a==0)
-            return "0.0";
+    public String ToString(Notation notation) {
+        /*if(a==0)
+            return "0.0";*/
         if(b==1)
             return a+ "*x";
-        if(b==0)
-            return a +"";
+        /*if(b==0)
+            return a +"";*/
         return a+ "*x^" + b;
     }
 }

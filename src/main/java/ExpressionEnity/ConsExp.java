@@ -1,6 +1,7 @@
 package ExpressionEnity;
 
 import ExpressionInterface.Expression;
+import NotationInterface.Notation;
 
 public class ConsExp implements Expression {
     private double value = 0;
@@ -19,7 +20,7 @@ public class ConsExp implements Expression {
         return new ConsExp(0);
     }
 
-    public String ToString() {
+    public String ToString(Notation notation) {
         return this.value + "";
     }
 }

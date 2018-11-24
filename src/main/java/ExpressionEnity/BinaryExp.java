@@ -1,6 +1,7 @@
 package ExpressionEnity;
 
 import ExpressionInterface.Expression;
+import NotationInterface.Notation;
 import Utils.ServiceUtils;
 
 import java.util.Map;
@@ -14,6 +15,7 @@ public abstract class BinaryExp implements Expression{
     public BinaryExp(Expression exp1, Expression exp2) {
         this.exp1 = exp1;
         this.exp2 = exp2;
+
     }
     public double evaluate(double x) {
         double val1 = exp1.evaluate(x);
@@ -24,20 +26,20 @@ public abstract class BinaryExp implements Expression{
     protected abstract double doEvaluate(double val1, double val2);
     public abstract Expression derive();
 
-    public String ToString() {
-        String op = getOperator();
+    public String ToString(Notation notation) {
+       /* String op = getOperator();
         if(op.equals("+")){
-            if (exp1.ToString().equals("0.0"))
-                return exp2.ToString();
-            if (exp2.ToString().equals("0.0"))
-                return exp1.ToString();
+            if (exp1.ToString(notation).equals("0.0"))
+                return exp2.ToString(notation);
+            if (exp2.ToString(notation).equals("0.0"))
+                return exp1.ToString(notation);
         }
         if(op.equals("*")){
-            if(exp1.ToString().equals("0.0") || exp2.ToString().equals("0.0"))
+            if(exp1.ToString(notation).equals("0.0") || exp2.ToString(notation).equals("0.0"))
                 return "0.0";
         }
         if(op.equals("/")){
-            String[] str = exp1.ToString().split("-");
+            String[] str = exp1.ToString(notation).split("-");
 
             str[0]=ServiceUtils.replace(str[0]);
             str[1]=ServiceUtils.replace(str[1]);
@@ -49,18 +51,18 @@ public abstract class BinaryExp implements Expression{
             }
             if(value1.containsKey(false) && value2.containsKey(true) ){
                 if(value2.get(true) == 0.0)
-                    return str[0]+ op + " " + exp2.ToString();
+                    return str[0]+ op + " " + exp2.ToString(notation);
             }
             if(value1.containsKey(true) && value2.containsKey(false) ){
                 if(value1.get(true) == 0.0)
-                    return "-"+str[1]+ op + " " + exp2.ToString();
+                    return "-"+str[1]+ op + " " + exp2.ToString(notation);
             }
-
-
-
         }
-
-        return "(" + exp1.ToString()+" " + op + " " + exp2.ToString() + ")";
+        return "(" + exp1.ToString(notation)+" " + op + " " + exp2.ToString(notation) + ")";*/
+       String operator = getOperator();
+       String operand1 = exp1.ToString(notation);
+       String operand2 = exp2.ToString(notation);
+       return notation.arrange(operator,operand1,operand2);
 
     }
     protected abstract String getOperator();

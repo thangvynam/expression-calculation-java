@@ -1,6 +1,7 @@
 package ExpressionEnity;
 
 import ExpressionInterface.Expression;
+import NotationInterface.Notation;
 
 public class MulExp extends BinaryExp {
     protected double doEvaluate(double val1, double val2) {

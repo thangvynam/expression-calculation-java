@@ -1,6 +1,7 @@
 package ExpressionEnity;
 
 import ExpressionInterface.Expression;
+import NotationInterface.Notation;
 
 public class DivExp extends BinaryExp {
     protected double doEvaluate(double val1, double val2) {
@@ -12,6 +13,7 @@ public class DivExp extends BinaryExp {
     public Expression derive() {
         return new DivExp(new AddExp(new MulExp(exp1.derive(),exp2),new MulExp(exp2.derive(),exp1),true)
                          ,new MulExp(exp2,exp2));
+
     }
 
     public DivExp(Expression exp1, Expression exp2) {
